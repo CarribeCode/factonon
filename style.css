@@ -46,7 +46,7 @@ img{
 .top_btn{
   width: 32%;
   border: none;
-  font-size: 3vw;
+  font-size: 1vw;
   color: #fff;
   background-color: inherit;
 }
@@ -57,7 +57,7 @@ h1{
 }
 
 h2{
-  font-size: 5vw;
+  font-size: 6vw;
   margin: 30px auto;
 }
 
