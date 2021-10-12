@@ -8,7 +8,7 @@ a:hover{
 
 body{
   text-align: center;
-  min-height: 650px;
+  min-height: 50vw;
   font-family: Papyrus, fantasy;
   font-size: 2vw;
   color: #fff;
@@ -67,7 +67,7 @@ h2{
 }
 
 footer{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
