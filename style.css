@@ -9,6 +9,7 @@ a:hover{
 body{
   text-align: center;
   min-height: 50vw;
+  height: 100%;
   font-family: Papyrus, fantasy;
   font-size: 2vw;
   color: #fff;
@@ -37,7 +38,7 @@ button{
 }
 
 img{
-  width: 30px;
+  width: 3vw;
   height: auto;
   margin-left: 5px;
   margin-bottom: 0;
@@ -46,7 +47,7 @@ img{
 .top_btn{
   width: 32%;
   border: none;
-  font-size: 1vw;
+  font-size: 5vw;
   color: #fff;
   background-color: inherit;
 }
