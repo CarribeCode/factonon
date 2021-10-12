@@ -13,7 +13,7 @@ setInterval(() => {
   let p2 = 50 + Math.abs(a2 - b2);
 
   document.body.style.backgroundImage =
-    `linear-gradient(115deg, #111 80%, rgb(${p1},0,${p2}) 20%)`;
+    `linear-gradient(115deg, #111 65%, rgb(${p1},0,${p2}) 35%)`;
   a1--;
   b1++;
   a2++;
