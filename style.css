@@ -37,16 +37,16 @@ button{
 }
 
 img{
-  width: 3vw;
+  width: 30px;
   height: auto;
   margin-left: 5px;
   margin-bottom: 0;
 }
 
 .top_btn{
-  width: 32%;
+  width: 30%;
   border: none;
-  font-size: 3vw;
+  font-size: 30px;
   color: #fff;
   background-color: inherit;
 }
@@ -63,7 +63,7 @@ h2{
 
 .rezilta{
   font-size: 50px;
-  margin-top: 8%;
+  margin-top: 7%;
 }
 
 footer{
