@@ -8,13 +8,13 @@ a:hover{
 
 body{
   text-align: center;
-  min-height: 1300px;
+  min-height: 650px;
   font-family: Papyrus, fantasy;
   color: #fff;
 }
 
 hr{
-  border: 1px solid #fff;
+  color: #fff;
 }
 
 button{
@@ -36,7 +36,7 @@ button{
 }
 
 img{
-  width: 30px;
+  width: 3vw;
   height: auto;
   margin-left: 5px;
   margin-bottom: 0;
@@ -45,13 +45,13 @@ img{
 .top_btn{
   width: 30%;
   border: none;
-  font-size: 30px;
+  font-size: 3vw;
   color: #fff;
   background-color: inherit;
 }
 
 h1{
-  font-size: 70px;
+  font-size: 7vw;
   margin: 30px;
 }
 
