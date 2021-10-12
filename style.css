@@ -10,6 +10,7 @@ body{
   text-align: center;
   min-height: 650px;
   font-family: Papyrus, fantasy;
+  font-size: 2vw;
   color: #fff;
 }
 
@@ -51,12 +52,12 @@ img{
 }
 
 h1{
-  font-size: 7vw;
+  font-size: 9vw;
   margin: 30px;
 }
 
 h2{
-  font-size: 30px;
+  font-size: 5vw;
   margin: 30px auto;
 }
 
