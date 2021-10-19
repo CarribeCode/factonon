@@ -8,7 +8,7 @@ a:hover{
 
 body{
   text-align: center;
-  min-height: 500px;
+  min-height: 750px;
   font-family: serif;
   font-size: 4vw;
   color: #fff;
@@ -52,17 +52,17 @@ img{
 }
 
 h1{
-  font-size: 15vw;
+  font-size: 30vw;
   margin: 30px;
 }
 
 h2{
-  font-size: 8vw;
+  font-size: 12vw;
   margin: 30px auto;
 }
 
 .rezilta{
-  font-size: 12vw;
+  font-size: 20vw;
   margin: 5%;
 }
 
