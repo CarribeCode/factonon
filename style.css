@@ -9,7 +9,6 @@ a:hover{
 body{
   text-align: center;
   min-height: 650px;
-  font-size: 3vw;
   font-family: serif;
   color: #fff;
 }
@@ -67,10 +66,14 @@ h2{
   margin: 5%;
 }
 
+p{
+  font-size: 3vw;
+}
+
 footer{
   position: fixed;
   bottom: 0;
   width: 100%;
-  font-size: 1vw;
+  font-size: 2vw;
   text-align: center;
 }
