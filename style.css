@@ -8,14 +8,13 @@ a:hover{
 
 body{
   text-align: center;
-  min-height: 750px;
+  min-height: 650px;
   font-family: serif;
-  font-size: 4vw;
   color: #fff;
 }
 
 hr{
-  color: #fff;
+  border: 1px solid #fff;
 }
 
 button{
@@ -25,11 +24,12 @@ button{
 .btn{
   border: none;
   border-radius: 15px;
-  width: 100px;
+  width: 90px;
   height: inherit;
   font-size: 19px;
   font-family: inherit;
   font-weight: bolder;
+  margin-bottom: 2vw
 }
 
 .btn:hover{
@@ -37,27 +37,27 @@ button{
 }
 
 img{
-  width: 3vw;
+  width: 30px;
   height: auto;
   margin-left: 5px;
   margin-bottom: 0;
 }
 
 .top_btn{
-  width: 32%;
+  width: 30%;
   border: none;
-  font-size: 3vw;
+  font-size: 30px;
   color: #fff;
   background-color: inherit;
 }
 
 h1{
-  font-size: 11vw;
+  font-size: 12vw;
   margin: 30px;
 }
 
 h2{
-  font-size: 7vw;
+  font-size: 5vw;
   margin: 30px auto;
 }
 
