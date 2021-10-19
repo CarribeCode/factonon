@@ -9,6 +9,7 @@ a:hover{
 body{
   text-align: center;
   min-height: 650px;
+  font-size: 3vw;
   font-family: serif;
   color: #fff;
 }
@@ -70,5 +71,6 @@ footer{
   position: fixed;
   bottom: 0;
   width: 100%;
+  font-size: 1vw;
   text-align: center;
 }
