@@ -8,20 +8,10 @@ a:hover{
 
 body{
   text-align: center;
-  min-height: 100vw;
-  font-family: Papyrus, fantasy;
+  min-height: 650px;
+  font-family: serif;
   font-size: 2vw;
   color: #fff;
-}
-
-@media only screen and(max-width: 620px){
-  body{
-    height: 100%;
-  }
-  p{
-    font-size: 3vw;
-    margin-top: 100px;
-  }
 }
 
 hr{
@@ -62,18 +52,18 @@ img{
 }
 
 h1{
-  font-size: 11vw;
+  font-size: 7vw;
   margin: 30px;
 }
 
 h2{
-  font-size: 7vw;
+  font-size: 3vw;
   margin: 30px auto;
 }
 
 .rezilta{
-  font-size: 50px;
-  margin-top: 7%;
+  font-size: 5vw;
+  margin: 5%;
 }
 
 footer{
