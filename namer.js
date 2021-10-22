@@ -106,18 +106,20 @@ document.getElementById('btn').addEventListener('click', function() {
     }
     break;
 
-    case 3: { //Characters on position 1 and even positions are consonants.
+    case 3: { //Characters on position 1 and even positions are vowels.
       if (j == 1 || j % 2 == 0) {
-        actualChar = consonant();
-      } else {
         actualChar = vowel();
+      } else {
+        actualChar = consonant();
       }
     }
     break;
 
-    case 4: { //Vowels are on positions 2 and 5
-      if (j == 2 || j == 5 || j == 7) {
+    case 4: { //Vowels are on even; positions 1, 5 and 7 are konpo.
+      if (j % 2 == 0) {
         actualChar = vowel();
+      } else if(j == 1 || j == 5 || j == 7){
+        actualChar = konpo();
       } else {
         actualChar = consonant();
       }
@@ -125,7 +127,7 @@ document.getElementById('btn').addEventListener('click', function() {
     break;
 
     case 5: { //Characters position 1 and on positions multiples of 3 are vowels.
-      if (j == 1 || j % 3 == 0) {
+      if (j % 2 == 0) {
         actualChar = vowel();
       } else {
         actualChar = konpo();
@@ -135,15 +137,15 @@ document.getElementById('btn').addEventListener('click', function() {
 
     case 6: {
       if (j % 2 == 0) {
-        actualChar = vowel();
-      } else {
         actualChar = konpo();
+      } else {
+        actualChar = vowel();
       }
     }
     break;
 
     case 7: {
-      if (j == 1) {
+      if (j == 3 || j == 7) {
         actualChar = konpo();
       } else if (j % 2 == 0) {
         actualChar = vowel();
@@ -157,16 +159,16 @@ document.getElementById('btn').addEventListener('click', function() {
       if (j == 1 || j % 2 == 0) {
         actualChar = vowel();
       } else {
-        actualChar = consonant();
+        actualChar = konpo();
       }
     }
 
-    default: {
-      if (j == 3 || j == 7) {
+    default: { //Even positions are vowels, position 1 is konpo, the rests are consonants.
+      if (j == 1) {
         actualChar = konpo();
-      } else if (j % 2 == 0) {
+      } else if (j % 2 == 0){
         actualChar = vowel();
-      } else {
+      } else{
         actualChar = consonant();
       }
     }
