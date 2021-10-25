@@ -25,50 +25,37 @@ setInterval(() => {
 }, 100);
 
 
-// The letters of the alphabet (Lèt alfabè yo)
-var alfa = [];
-for (var i = 65; i <= 90; i++) {
-  alfa.push(i);
-}
-
-var konpo = ['BH', 'BL', 'BM', 'BN', 'BR', 'BW', 'CH', 'CK', 'CL', 'CR', 'CW', 'DH', 'DJ', 'DL',
-  'DR', 'DW', 'DZ', 'FH', 'FL', 'FN', 'FR', 'FW', 'GH', 'GL', 'GM', 'GN', 'GR', 'GW', 'JW', 'KH',
-  'KL', 'KM', 'KN', 'KW', 'LH', 'LW', 'MH', 'MW', 'NH', 'NW', 'PF', 'PH', 'PL', 'PR', 'PS', 'PW',
-  'RH', 'RW', 'SB', 'SC', 'SD', 'SF', 'SH', 'SK', 'SL', 'SM', 'SN', 'SP', 'SR', 'ST', 'SV', 'SW',
-  'SZ', 'TH', 'TL', 'TR', 'TS', 'TW', 'VL', 'VM', 'VN', 'VR', 'VW', 'WH', 'WR', 'ZH', 'ZL', 'ZR',
-  'ZV', 'ZW'
-];
-
-
-//Declaration of the usefull variables
-var name, actualChar, len, method;
-
-// This function will return composed elements from the array konpo.
+// This function will return composed elements (Fonksyon sa a bay eleman konpoze).
 function konpo() {
+  let konpo = ['BH', 'BL', 'BM', 'BN', 'BR', 'BW', 'CH', 'CK', 'CL', 'CR', 'CW', 'DH', 'DJ', 'DL',
+    'DR', 'DW', 'DZ', 'FH', 'FL', 'FN', 'FR', 'FW', 'GH', 'GL', 'GM', 'GN', 'GR', 'GW', 'JW', 'KH',
+    'KL', 'KM', 'KN', 'KW', 'LH', 'LW', 'MH', 'MW', 'NH', 'NW', 'PF', 'PH', 'PL', 'PR', 'PS', 'PW',
+    'RH', 'RW', 'SB', 'SC', 'SD', 'SF', 'SH', 'SK', 'SL', 'SM', 'SN', 'SP', 'SR', 'ST', 'SV', 'SW',
+    'SZ', 'TH', 'TL', 'TR', 'TS', 'TW', 'VL', 'VM', 'VN', 'VR', 'VW', 'WH', 'WR', 'ZH', 'ZL', 'ZR',
+    'ZV', 'ZW', 'SCH', 'SCHM', 'STR','MB', 'MD', 'MK'
+  ];
   return konpo[Math.floor(Math.random() * konpo.length)];
 }
 
 // This function produces only vowels (Fonksyon sa a bay vwayèl sèlman)
 function vowel() {
-  do {
-    actualChar = Math.floor(Math.random() * 26 + 65);
-  }
-  while (actualChar != 65 && actualChar != 69 && actualChar != 73 && actualChar != 79 && actualChar != 85 && actualChar != 89);
-
-  return actualChar;
+  let vowel = ['A', 'E', 'I', 'O', 'U', 'Y'];
+  return vowel[Math.floor(Math.random() * vowel.length)];
 }
 
 // This function only produces consonants (Fonksyon sa a bay konson sèlman)
 function consonant() {
-  do {
-    actualChar = Math.floor(Math.random() * 26 + 65);
-  }
-  while (actualChar == 65 || actualChar == 69 || actualChar == 73 || actualChar == 79 || actualChar == 85 || actualChar == 89 || actualChar == 96);
+  let consonant = [];
+  for (let i = 65; i <= 90; i++) {
+    if (i != 65 && i != 69 && i != 73 && i != 79 && i != 85 && i != 89) {
+      consonant.push(String.fromCharCode(i));
+    }
 
-  return actualChar;
+  }
+  return consonant[Math.floor(Math.random() * consonant.length)];
 }
 
-// Once we click on the button
+// Once we click on the button.
 document.getElementById('btn').addEventListener('click', function() {
   // We declare necessary variables first.
 
@@ -80,102 +67,114 @@ document.getElementById('btn').addEventListener('click', function() {
   len = Math.floor(Math.random() * 7 + 2);
 
   // Step 2 (Etap 2) : The method which will be used to make the name. (Metod la nou pral kreye non an)
-  method = Math.ceil(Math.random() * 9);
+  method = Math.ceil(Math.random() * 10);
 
   // Step 3 (Etap 3) : Initiating the name to nothing.
   name = '';
 
   // Step 4 (Etap 4) : Making the name
-  for (let j = 1; j <= len; j++) {
-    switch (method) {
-      case 1: { //Characters on even positions are consonants.
-        if (j % 2 == 0) {
-          actualChar = consonant();
-        } else {
-          actualChar = vowel();
-        }
-      }
-      break;
+ for (let j = 1; j <= len; j++) {
+   switch (method) {
+     case 1: { //Characters on even positions are consonants.
+       if (j % 2 == 0) {
+         actualChar = consonant();
+       } else {
+         actualChar = vowel();
+       }
+     }
+     break;
 
-    case 2: { //Characters on even positions are vowels.
-      if (j % 2 == 0) {
-        actualChar = vowel();
-      } else {
-        actualChar = consonant();
-      }
-    }
-    break;
+   case 2: { //Characters on even positions are vowels.
+     if (j % 2 == 0) {
+       actualChar = vowel();
+     } else {
+       actualChar = consonant();
+     }
+   }
+   break;
 
-    case 3: { //Characters on position 1 and even positions are vowels.
-      if (j == 1 || j % 2 == 0) {
-        actualChar = vowel();
-      } else {
-        actualChar = consonant();
-      }
-    }
-    break;
+   case 3: { //Characters on position 1 and even positions are vowels.
+     if (j == 1 || j % 2 == 0) {
+       actualChar = vowel();
+     } else {
+       actualChar = consonant();
+     }
+   }
+   break;
 
-    case 4: { //Vowels are on even; positions 1, 5 and 7 are konpo.
-      if (j % 2 == 0) {
-        actualChar = vowel();
-      } else if(j == 1 || j == 5 || j == 7){
-        actualChar = konpo();
-      } else {
-        actualChar = consonant();
-      }
-    }
-    break;
+   case 4: { //Vowels are on even; positions 1, 5 and 7 are konpo.
+     if (j % 2 == 0) {
+       actualChar = vowel();
+     } else if(j == 1 || j == 5 || j == 7){
+       actualChar = konpo();
+     } else {
+       actualChar = consonant();
+     }
+   }
+   break;
 
-    case 5: { //Characters position 1 and on positions multiples of 3 are vowels.
-      if (j % 2 == 0) {
-        actualChar = vowel();
-      } else {
-        actualChar = konpo();
-      }
-    }
-    break;
+   case 5: { //Position 6 and 8 are consonants, 1 and 4 konpo and the rest is vowels.
+     if (j == 6 || j == 8) {
+       actualChar = consonant();
+     } else if(j == 1 || j == 4){
+       actualChar = konpo();
+     } else {
+       actualChar = vowel();
+     }
+   }
+   break;
 
-    case 6: {
-      if (j % 2 == 0) {
-        actualChar = konpo();
-      } else {
-        actualChar = vowel();
-      }
-    }
-    break;
+   case 6: { // Even positions are vowels, 3 is konpo and the rest is consonants.
+     if (j % 2 == 0) {
+       actualChar = vowel();
+     } else if(j == 3){
+       actualChar = konpo();
+     } else{
+       actualChar = consonant();
+     }
+   }
+   break;
 
-    case 7: {
-      if (j == 3 || j == 7) {
-        actualChar = konpo();
-      } else if (j % 2 == 0) {
-        actualChar = vowel();
-      } else {
-        actualChar = consonant();
-      }
-    }
-    break;
+   case 7: { // Even positions are vowels, 3 and 7 are konpo, the rest is consonants.
+     if (j == 3 || j == 7) {
+       actualChar = konpo();
+     } else if (j % 2 == 0) {
+       actualChar = vowel();
+     } else {
+       actualChar = consonant();
+     }
+   }
+   break;
 
-    case 8: {
-      if (j == 1 || j % 2 == 0) {
-        actualChar = vowel();
-      } else {
-        actualChar = konpo();
-      }
-    }
+   case 8: { // Positions 1 and 2 are vowels, the rest is konpo.
+     if (j == 1 || j % 2 == 0) {
+       actualChar = vowel();
+     } else {
+       actualChar = konpo();
+     }
+   }
 
-    default: { //Even positions are vowels, position 1 is konpo, the rests are consonants.
-      if (j == 1) {
-        actualChar = konpo();
-      } else if (j % 2 == 0){
-        actualChar = vowel();
-      } else{
-        actualChar = consonant();
-      }
-    }
+   case 9: { // Positions multiples of 2 and 3 are vowels, the rest is konpo.
+     if(j%2 == 0 || j % 3 == 0){
+       actualChar = vowel();
+     } else {
+       actualChar = konpo();
+     }
+   }
 
-    }
+   default: { //Even positions are vowels, position 1 is konpo, the rest is consonants.
+     if (j == 1) {
+       actualChar = konpo();
+     } else if (j % 2 == 0){
+       actualChar = vowel();
+     } else{
+       actualChar = consonant();
+     }
+   }
+
+   }
     // Step 5 (Etap 5) : Put everything together (Mete tout eleman yo ansanm).
-    name += String.fromCharCode(actualChar);
+    name += actualChar;
   }
   // Step 6 (Etap 6) : Show the name on the page.
   document.getElementById("rezilta").innerHTML = name;
